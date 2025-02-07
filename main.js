@@ -1,0 +1,1 @@
+window.alert('thes is personal websit about adidas')

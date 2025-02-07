@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+body {
+    height: 500px;
+}
+
+.one {
+    background-color: #2C3A4F;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.one::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #FF4D4D;
+  position: absolute;
+    clip-path: circle(40% at right 70%);
+}
+
+@media (max-width: 768px) {
+    .one::after {
+        clip-path: circle(40% at bottom);
+
+    }
+}
+
+.one .tow {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    z-index: 2;
+
+}
+
+.one .tow nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+.logo {
+    margin-bottom: 10px;
+}
+.one .tow nav .logo {
+    font-size: 1.5rem;
+
+}
+.one .tow nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+.one .tow nav ul li a:hover {
+    color: #FF4D4D;
+}
+.one .tow nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .one .tow nav {
+        flex-direction: column;
+    }
+}
+.three1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+.three {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.three .text {
+    width: 50%;
+    color: #ffffff;
+}
+
+.three .text h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+
+.three .text p {
+    font-size: 1rem;
+    line-height: 25px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+
+}
+.three .image {
+    width: 40%;
+}
+.three .image img {
+    width: 250px;
+    float: right;
+    border-radius: 50%;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+    .three1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+    }
+
+    .three {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .three .text {
+        width: 40%;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .three .text h2 {
+        font-size: 25px;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        letter-spacing: 2px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .three .text p {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 10px 0;
+        letter-spacing: 2px;
+
+    }
+
+    .three .image {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .three .image img {
+        width: 260px;
+
+        margin: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .three1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+    }
+
+    .three {
+        flex-direction: column;
+    }
+
+    .three .text {
+        width: 90%;
+        color: #ffffff;
+        text-align: center;
+    }
+    .three .text h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-top: 50px;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .three .text p {
+        font-size: 1rem;
+        line-height: 17px;
+
+    }
+
+    .three .image {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .three .image img {
+        width: 250px;
+        margin: auto;
+    }
+}
+
+
+
+
+.tow .div1 {
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: ahmed;
+    animation-duration: 1.5s;
+    /* وقت تاخر بدا الانيميشن*/
+    animation-delay: 0.5s;
+    /* عدد حركات الانيميشن */
+    animation-iteration-count: infinite;
+    /*اتجاه حركة الانيميشن 
+الطبيعي normal
+alternate من نقطة البدايه الي نقطة النهاية وترجع تاني
+
+*/
+animation-direction: alternate;
+}
+
+/*@keyframes ahmed {
+    0% {
+        translate: 0 0;
+        background-color: aqua;
+        rotate: 0;
+    }
+
+    25% {
+        translate: 0 100px;
+        background-color: #383838;
+        rotate: 90deg;
+    }
+
+    50% {
+        translate: 100px 100px;
+        background-color: aqua;
+        rotate: 180deg;
+    }
+
+    75% {
+        translate: 100px 0;
+        background-color: #383838;
+        rotate: 270deg;
+    }
+
+    100% {
+        translate: 0 0;
+        background-color: aqua;
+        rotate: 360deg;
+    }
+}
+.tow .div1:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.tow .div1 .div2 {
+
+    height: 90%;
+    width: 80%;
+
+}
+.ahm{
+    margin-top: 120px;
+    text-align: center;
+}
+.ahm a{
+    background-color: brown;
+    text-decoration: none;
+    font-size: 40px;
+    color: #ffffff;
+    padding: 10px 30px;
+    animation-name: a;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes a {
+    0%{
+        border-radius: 0px;
+        translate: 0px 0px;
+    
+    }
+25%{
+    border-radius: 20px 50px 10px 50px;
+   translate: 50px 0px;
+}
+50%{
+    border-radius: 0px ;
+    translate: 50 50px;
+}
+75%{
+        border-radius: 20px;
+        translate: 0px 50px;
+        rotate: 9deg;
+}
+100%{
+        border-radius: 0px;
+        translate: 0 0px;
+}
+}
+.ahm a:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}*/
